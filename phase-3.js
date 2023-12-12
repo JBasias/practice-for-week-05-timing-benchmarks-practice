@@ -4,12 +4,46 @@ function addNums10Timing(increment) {
   // Copy your `addNums10` code here
   // Then, add timing code
 
+ // console.time("Timer 1");
+
+  let ret=[];
+  for(let i=1;i<=10;i++)
+  {
+       startTime = Date.now();
+       ret.push(addNums(i*increment));
+       endTime = Date.now();
+       console.log(`${endTime - startTime}`);
+
+
+       //console.timeLog("Timer 1");
+  }
+
+  //console.timeEnd("Timer 1");
+
+  return ret;
+
   // Your code here
 
 }
 
 
 function addManyNums10Timing(increment) {
+
+  let ret=[];
+ // console.time("Timer 1");
+  for(let i=1;i<=10;i++)
+  {
+       startTime = Date.now();
+       ret.push(addManyNums(i*increment));
+       //console.timeLog("Timer 1");
+       endTime = Date.now();
+       console.log(`${endTime - startTime}`);
+  }
+
+  //console.timeEnd("Timer 1");
+
+
+  return ret;
 // Copy your `addManyNums10` code here
 // Then, add timing code
 
